@@ -1,0 +1,26 @@
+// Prisma schema for Order of Loves app
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String?   
+  email     String    @unique
+  createdAt DateTime  @default(now())
+  reflections Reflection[]
+}
+
+model Reflection {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}

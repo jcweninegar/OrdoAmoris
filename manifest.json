@@ -1,0 +1,21 @@
+{
+  "name": "Order of Loves",
+  "short_name": "OrderOfLoves",
+  "description": "A calm, minimalist Catholic daily reflection and planning app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9FAFB",
+  "theme_color": "#374151",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
